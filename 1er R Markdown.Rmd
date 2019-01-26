@@ -1,0 +1,24 @@
+---
+title: "1er R Markdown"
+author: "Gustavo Céspedes"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+```
+
+# Incluir imagen
+![](double_brackets.png)
+
+# Chunk con código de R
+
+```{r, fig.height=5, fig.width=5}
+mpg %>% 
+  ggplot(aes(hwy, cty)) + 
+  geom_point() + 
+  theme_minimal()
+```
+
